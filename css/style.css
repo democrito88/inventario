@@ -1,0 +1,403 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 01/08/2018, 13:24:40
+    Author     : democrito.rodrigo
+    AZUL: #006eb4
+*/
+/*Login*/
+.fundoLogin{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #006eb4;
+    background-image: url( ../img/background.jpg);
+    background-size: 100%;
+    height: inherit;
+}
+/* Add styles to the form container */
+.containerLogin{
+    position: relative;
+    top: calc(50% - 175px);
+    margin: auto;
+    padding: 16px;
+    background-color: white;
+    height: 350px;
+    width: 700px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px #aaa;
+}
+.containerLogin img{
+    margin-top: 5%;
+    float: left;
+}
+.containerLogin canvas{
+    background-color: #aaa;
+    float: left;
+    height: 28vh;
+    top: 5%;
+    width: 2px;
+    margin: 0 3%;
+}
+/* Full-width input fields */
+.formLogin{
+    float: left;
+    margin-bottom: 25px;
+    -webkit-box-sizing: unset !important;
+    box-sizing: unset !important;
+}
+.formLogin h2{
+    margin: 0;
+}
+.formLogin h5{color: red;}
+.formLogin input{
+    width: 100%;
+    padding: 2px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+.formLogin input:focus{
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit button */
+.formLogin button{
+    background-color: #4CAF50;
+    color: white;
+    padding: 3px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    font-size: 15px;
+}
+
+.formLogin button:hover {
+    opacity: 1;
+}
+/*Fim Login*/
+
+/*Principal*/
+.btn{border: none !important;}
+.btn-primary{
+    background-image: none !important;
+    background-color: #006eb4 !important;}
+footer{
+    /*position: relative;*/
+    background-color: #006eb4;
+    color: white;
+    padding: 1%;
+    text-align: center;
+    /*top: 100%;*/
+}
+header{
+    background-color: #006eb4;
+    color: white;
+    height: 100px;
+    padding: 1% 5% 1% calc(170px + 1%);
+}
+header h2{
+    margin: 0;
+    text-align: center;
+}
+header h5,header a{
+    color: white;
+    /*float: right;
+    margin-right: 15px;*/
+}
+header a:hover{color: white; cursor: pointer;}
+header a:visited{color: white;}
+
+aside{
+    top: 0;
+    height: 100%;
+    width: 170px;
+    position: fixed;
+    background-color: #006eb4;
+    overflow-x: hidden;
+    padding-top: 12%;
+    text-align: center;
+}
+
+aside a{
+    color: white;
+    font-size: 18px;
+}
+
+aside a:hover {
+    color: #aaa;
+    text-decoration: none;
+}
+
+aside canvas{
+    background-color: white;
+    height: 1px;
+    width: 70%;
+    margin: 2% 15%;
+}
+
+.principalSessao{
+    padding: 3% 8%;
+    widows: calc(100% - 170px);
+    margin-left: 170px;
+}
+.principalSessao h3,.principalSessao h4{color: #555; text-align: center;}
+.principalTabela thead{
+    background-color: #006eb4;
+    color: white;
+    border-radius: 10px !important;
+}
+
+.detalhes{cursor: pointer;}
+.detalhes:hover{text-decoration: none;}
+
+.editar{color: #cc9900;}
+.editar:visited{color: #cc9900;}
+.editar:hover{
+    color: #cc9900;
+    text-decoration: none;
+}
+
+.remover{color: red;}
+
+.remover .tooltiptext {
+    visibility: hidden;
+    width: auto;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -37px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.remover .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.remover:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+/*Fim Principal*/
+
+/*Cadastrar*/
+.sessaoFormulario{
+    padding: 5% 8%;
+    display: inline-block;
+}
+.sessaoFormulario h3, .sessaoFormulario h4{
+    text-align: center;
+    color: #666;
+}
+
+.sessaoFormulario form label{
+    min-width: 150px;
+}
+
+.modalFundo{
+    position: fixed;
+    z-index: 1;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.fechar{
+    color: white;
+    margin-left: 90%;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.alerta-sucesso{
+    z-index: 1;
+    position: fixed;
+    width: 25%;
+    margin: 10% 0 0 37.5%;
+    text-align: center;
+}
+
+.modalCadastro{
+    width: 30%;
+    min-width: 208px;
+    margin: auto;
+}
+
+.modalCadastro form{
+    padding: 15px;
+}
+.modalCadastro form label{min-width: 120px;}
+
+.modalPrincipal{
+    width: 50%;
+    margin: auto;
+    min-width: 376px;
+}
+
+.modalPrincipal canvas{
+    background-color: #666;
+    width: 1px;
+    height: 430px;
+    margin-right: 20px;
+    float: left;
+}
+
+@media screen and (max-width: 750px) {
+    .modalPrincipal canvas{display: none;}
+}
+/*fim cadastro*/
+
+/*Cadastro de manutenção*/
+#cadastroComputador canvas{
+    background-color: #888;
+    width: 1px;
+    height: 640px;
+    float: right;
+    margin: 100px 0 0 8%;
+}
+
+@media screen and (max-width: 775px) {
+    #cadastroComputador canvas{display: none;}
+}
+
+.sessaoManutencao{
+   padding: 5% 8%;
+}
+
+.check-form{
+    margin: 14px 0 0 5px;
+    /*float: left;*/
+}
+
+.sessaoManutencao h3{text-align: center;}
+.sessaoManutencao h4{
+    margin-left: 33%;
+    float: left;
+}
+
+.sessaoManutencao form div[class=col-sm-9]{
+    min-width: 564px;}
+
+.sessaoManutencao input[type="text"]{
+    min-width: 200px;
+}
+
+.busca-pc-right::after {
+    content: "";
+    position: absolute;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #555 transparent transparent;
+}
+
+.busca-pc .busca-pc-texto {
+    position: absolute;
+    height: available;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    border-radius: 6px;
+    z-index: 1;
+    /*opacity: 0;*/
+    transition: opacity 0.3s;
+}
+/*Fim cadastro de manutenção*/
+
+/*Formulario de Pesquisa*/
+.sessaoSelecao{
+    background-color: #006eb4;
+    width: 100%;
+    height: auto;
+    align-content: center;
+    padding: 2%;
+    text-align: center;
+}
+
+.sessaoSelecao h3{
+    color: white;
+}
+
+.sessaoSelecao form input{
+    margin: 10px;
+}
+
+.sessaoSelecao form input[type='date']{
+    color: black;
+}
+
+.sessaoSelecao form{
+    margin: 1%;
+    align-content: flex-end;
+    color: white;
+}
+
+.sessaoSelecao form select, .sessaoSelecao form input[type=text]{
+    color: black;
+}
+
+.botaoVoltar{
+    float: left;
+}
+/*Fim formulário de pesquisa*/
+/*Pesquisar*/
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+/*Fim pesquisar*/
+
+/*Relatório*/
+#formularioRelatorio label{
+    margin-right: 10px;
+}
+
+.selectRelatorio{
+    visibility: hidden;
+}
+
+.listaGraficos{
+    background-color: #ddd;
+    text-align: left;
+    list-style-type: none;
+}
+/*Fim Relatório*/
