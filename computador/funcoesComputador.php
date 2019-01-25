@@ -2,7 +2,7 @@
 include_once '../funcoes/conection.php';
 function selecionaMarcas($id){
     $conn = conecta();
-    $query= "SELECT * FROM marca";
+    $query= "SELECT * FROM marca ORDER BY `nome`";
     $requisicao = mysqli_query($conn, $query);
     $select = "<select name='marca' form='cadastroComputador'>";
     while($marca = mysqli_fetch_assoc($requisicao)){
