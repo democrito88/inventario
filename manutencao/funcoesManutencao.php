@@ -1,7 +1,7 @@
 <?php
 function selecionaProblemas(){
     $conn = conecta();
-    $query= "SELECT * FROM problema";
+    $query= "SELECT * FROM problema ORDER BY `problema`";
     $requisicao = mysqli_query($conn, $query);
     $select = "<select id='selectProblemas' name='problema' onchange='adicionaProblema();'>";
     $select .= "<option value='0' selected>Selecione um problema</option>";

@@ -9,6 +9,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         switch($n){
             case '1':
+                $queryBusca = "SELECT COUNT(`problema`) AS existe FROM `problema` WHERE `problema` LIKE '%".$_POST['problema']."%'";
                 $query = "INSERT INTO `problema`(`problema`) VALUES ('".$_POST['problema']."')";
                 break;
             default :
@@ -16,7 +17,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
 
         $conn = conecta();
-        $sql = mysqli_query($conn, $query);
+        
+        //verifica se já existe no banco
+        $jaexiste = true;
+        $sql = mysqli_query($conn, $queryBusca);
+        while($resultado = mysqli_fetch_assoc($queryBusca)){
+            $jaexiste = $resultado['existe'];
+        }
+        if($jaexiste == '0'){//se não existir, persista no banco
+            $sql = mysqli_query($conn, $query);
+        }
+        
         desconecta($conn);
         header("Location: novoServico.php");
 

@@ -19,7 +19,7 @@ function selecionaMarcas($id){
 
 function selecionaMemoria($id){
     $conn = conecta();
-    $query= "SELECT * FROM memoria";
+    $query= "SELECT * FROM memoria ORDER BY `barramento`, `capacidade`";
     $requisicao = mysqli_query($conn, $query);
     $select = "<select name='memoria' form='cadastroComputador'>";
     while($memoria = mysqli_fetch_assoc($requisicao)){
@@ -35,7 +35,7 @@ function selecionaMemoria($id){
 
 function selecionaProcessador($id){
     $conn = conecta();
-    $query= "SELECT * FROM processador";
+    $query= "SELECT * FROM processador ORDER BY `fabricante`, `modelo`, `arquitetura`";
     $requisicao = mysqli_query($conn, $query);
     $select = "<select name='processador' form='cadastroComputador'>";
     while($processador = mysqli_fetch_assoc($requisicao)){
@@ -52,7 +52,7 @@ function selecionaProcessador($id){
 
 function selecionaArmazenamento($id){
     $conn = conecta();
-    $query= "SELECT * FROM armazenamento";
+    $query= "SELECT * FROM armazenamento ORDER BY `tecnologia`, `capacidade`";
     $requisicao = mysqli_query($conn, $query);
     $select = "<select name='armazenamento' form='cadastroComputador'>";
     while($armaz = mysqli_fetch_assoc($requisicao)){
@@ -68,7 +68,7 @@ function selecionaArmazenamento($id){
 
 function selecionaSO($id){
     $conn = conecta();
-    $query= "SELECT id, nome, versao, IF(licenca = '1', '(sem licença)', '') AS licenca FROM sistema_operacional";
+    $query= "SELECT id, nome, versao, IF(licenca = '1', '(sem licença)', '') AS licenca FROM sistema_operacional ORDER BY `nome`, `versao`";
     $requisicao = mysqli_query($conn, $query);
     $select = "<select name='so' form='cadastroComputador'>";
     while($sistema = mysqli_fetch_assoc($requisicao)){

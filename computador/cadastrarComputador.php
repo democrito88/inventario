@@ -34,7 +34,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['n']) && !is_null($_POST
     $conn = conecta();
     
     //verifica se já existe no banco
-    $jaexiste = 0;
+    $jaexiste = true;
     $sql = mysqli_query($conn, $queryBusca);
     while($resultado = mysqli_fetch_assoc($queryBusca)){
         $jaexiste = $resultado['existe'];
