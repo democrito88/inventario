@@ -24,7 +24,7 @@ $( "#dataSaida" ).click(
 <div id="modalCadastro" class="modalFundo"></div>
 <div id="modalManutencao" class="modalFundo"></div>
 <section class="sessaoFormulario">
-    <button class="btn btn-primary" onclick="window.location.replace('../principal.php')"><i class="glyphicon glyphicon-circle-arrow-left"></i>&nbsp;Voltar</button><br/>
+    <button class="btn btn-primary" onclick="window.location.replace('../principal.php')"><i class="glyphicon glyphicon-circle-arrow-left"></i>&nbsp;Voltar</button><br/><br/><br/>
     <div class="formularios">
         <h3>Novo serviço de manutenção</h3><br><br>
         

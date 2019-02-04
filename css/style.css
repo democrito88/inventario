@@ -201,7 +201,7 @@ aside canvas{
 
 /*Cadastrar*/
 .sessaoFormulario{
-    padding: 5% 25%;
+    padding: 5% 5%;
     display: inline-block;
     background-color: #eee;
     width: 100%;
@@ -282,10 +282,10 @@ aside canvas{
 .formularios{
     border-radius: 15px;
     background-color: white;
-    padding: 5%;
+    padding: 2%;
     width: fit-content;
-    width: -moz-max-content;
-    height: 120vh;
+    width: -moz-fit-content;
+    height: 130vh;
 }
 /*fim cadastro*/
 
@@ -293,7 +293,7 @@ aside canvas{
 #cadastroComputador canvas{
     background-color: #888;
     width: 1px;
-    height: 640px;
+    height: 800px;
     float: right;
     margin: 100px 0 0 8%;
 }
