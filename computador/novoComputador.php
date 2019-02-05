@@ -5,7 +5,7 @@ cabecalho();
 ?>
 
         <div id="modalCadastro" class="modalFundo"></div>
-        <section class="sessaoFormulario" style="padding: 5% 5% !important;">
+        <section class="sessaoFormulario" style="padding: 5% calc(50% - 220px) !important;">
             <button class="btn btn-primary" onclick="window.location.replace('../principal.php')"><i class="glyphicon glyphicon-circle-arrow-left"></i>&nbsp;Voltar</button><br/><br/>
             <div class="formComputador">
                 <h3>Cadastre um novo computador</h3><br><br>

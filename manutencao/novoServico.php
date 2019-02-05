@@ -31,7 +31,7 @@ $( "#dataSaida" ).click(
         <h4>O computador já está cadastrado no sistema?&nbsp;<input type="checkbox" checked onmousedown="mudaForm();" class="check-form"></h4><br/><br/>
 
         <form id="cadastroComputador" action="../computador/cadastrarComputador.php" method="POST" style="display: none;" class="">
-            <canvas></canvas>
+            <canvas class="divisoriaManutencao"></canvas>
             <h4>Cadastre o computador</h4><br/>
             <label>Tombo</label>
             <input type="text" name="tombo" onkeyup="marcaNao();"><br/><br/>

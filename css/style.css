@@ -201,12 +201,11 @@ aside canvas{
 
 /*Cadastrar*/
 .sessaoFormulario{
-    padding: 5% 5%;
+    padding: 5% calc(50% - 550px);
     display: inline-block;
     background-color: #eee;
     width: 100%;
-    height: fit-content;
-    height: -moz-fit-content;
+    min-height: calc(86vh - 16px);
 }
 .sessaoFormulario h3, .sessaoFormulario h4{
     text-align: center;
@@ -287,15 +286,33 @@ aside canvas{
     width: -moz-fit-content;
     height: 130vh;
 }
+
+.formHistorico{
+    border-radius: 15px;
+    background-color: white;
+    padding: 2%;
+    width: fit-content;
+    width: -moz-fit-content;
+    height: 85vh;
+}
+
 /*fim cadastro*/
 
 /*Cadastro de manutenção*/
-#cadastroComputador canvas{
+.divisoriaManutencao{
     background-color: #888;
     width: 1px;
-    height: 800px;
+    height: 940px;
     float: right;
-    margin: 100px 0 0 8%;
+    margin: 0px 0 0 8%;
+}
+
+.divisoriaHistorico{
+    background-color: #888;
+    width: 1px;
+    height: 590px;
+    float: right;
+    margin: 0px 0 0 8%;
 }
 
 @media screen and (max-width: 775px) {
