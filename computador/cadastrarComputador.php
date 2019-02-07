@@ -9,23 +9,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['n']) && !is_null($_POST
     switch($n){
         case '1':
             $queryBusca = "SELECT COUNT(`id`) AS existe FROM `marca` WHERE `nome` LIKE '%".$_POST['nome']."%'";
-            $query = "INSERT INTO `marca`(`nome`) VALUES ('".$_POST['nome']."')";
+            $query = "INSERT INTO `marca` (`nome`) VALUES ('".$_POST['nome']."')";
             break;
         case '2':
             $queryBusca = "SELECT COUNT(`id`) AS existe FROM `memoria` WHERE `barramento` LIKE '%".$_POST['barramento']."%' AND `capacidade` = '".$_POST['capacidade']."'";
-            $query = "INSERT INTO `memoria`(`barramento`,`capacidade`) VALUES ('".$_POST['barramento']."','".$_POST['capacidade']."')";
+            $query = "INSERT INTO `memoria` (`barramento`,`capacidade`) VALUES ('".$_POST['barramento']."','".$_POST['capacidade']."')";
             break;
         case '3':
             $queryBusca = "SELECT COUNT(`id`) AS existe FROM `processador` WHERE `fabricante` LIKE '%".$_POST['fabricante']."%' AND `arquitetura` = '".$_POST['arquitetura']."' AND `modelo` LIKE '%".$_POST['modelo']."%'";
-            $query = "INSERT INTO `processador`(`arquitetura`,`modelo`,`fabricante`) VALUES ('".$_POST['arquitetura']."','".$_POST['modelo']."','".$_POST['fabricante']."')";
+            $query = "INSERT INTO `processador` (`arquitetura`,`modelo`,`fabricante`) VALUES ('".$_POST['arquitetura']."','".$_POST['modelo']."','".$_POST['fabricante']."')";
             break;
         case '4':
             $queryBusca = "SELECT COUNT(`id`) AS existe FROM `armazenamento` WHERE `tecnologia` LIKE '%".$_POST['tecnologia']."%' AND `capacidade` = '".$_POST['capacidade']."'";
-            $query = "INSERT INTO `armazenamento`(`tecnologia`,`capacidade`) VALUES ('".$_POST['tecnologia']."','".$_POST['capacidade']."')";
+            $query = "INSERT INTO `armazenamento` (`tecnologia`,`capacidade`) VALUES ('".$_POST['tecnologia']."','".$_POST['capacidade']."')";
             break;
         case '5':
             $queryBusca = "SELECT COUNT(`id`) AS existe FROM `sistema_operacional` WHERE `nome` LIKE '%".$_POST['nome']."%' AND `licenca` = '".$_POST['licenca']."' AND `versao` LIKE '%".$_POST['versao']."%'";
-            $query = "INSERT INTO `sistema_operacional`(`nome`,`licenca`,`versao`) VALUES ('".$_POST['nome']."','".$_POST['licenca']."','".$_POST['versao']."')";
+            $query = "INSERT INTO `sistema_operacional` (`nome`,`licenca`,`versao`) VALUES ('".$_POST['nome']."','".$_POST['licenca']."','".$_POST['versao']."')";
             break;
         default :
             throw new Exception("<h4>Parâmetros inválidos</h4>");
@@ -36,7 +36,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['n']) && !is_null($_POST
     //verifica se já existe no banco
     $jaexiste = true;
     $sql = mysqli_query($conn, $queryBusca);
-    while($resultado = mysqli_fetch_assoc($queryBusca)){
+    while($resultado = mysqli_fetch_assoc($sql)){
         $jaexiste = $resultado['existe'];
     }
     if($jaexiste == '0'){//se não existir, persista no banco
@@ -44,6 +44,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['n']) && !is_null($_POST
     }
     
     desconecta($conn);
+    echo $queryBusca;
     $_POST['id'] === "1" ? header("Location: ../manutencao/novoServico.php") : ( $_POST['id'] === "0" ? header("Location: novoComputador.php") : header("Location: editarComputador.php?id=".$_POST['id']) );
     
 }else{

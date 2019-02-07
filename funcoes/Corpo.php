@@ -39,7 +39,7 @@ function cabecalho(){
 
 function rodape(){
     ?>
-        <footer><p>Sistema de inventário de computadores - versão 0.3.0 - Todos os direitos reservados</p></footer>
+        <footer><p>Sistema de inventário de computadores - versão 0.3.1 - Todos os direitos reservados</p></footer>
     </body>
 </html>
         <?php

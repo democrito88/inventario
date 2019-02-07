@@ -44,7 +44,7 @@ include_once './funcoes/funcoesAvisos.php';
 
                     <button type="submit" class="btn btn-success">Login</button>
                </form>
-                <span style="margin-top: 20px !important; float: left;">Versão 0.3.0 - Todos os direitos reservados</span>
+                <span style="margin-top: 20px !important; float: left;">Versão 0.3.1 - Todos os direitos reservados</span>
             </div>
         </section>
     </body>
