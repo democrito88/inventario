@@ -15,7 +15,7 @@ $painel = "<p class=\"fechar\" onclick=\"fechaModal('modalPrincipal');\">&times;
     <div class=\"panel panel-primary modalPrincipal\" style=\"width:30%;\">
         <div class=\"panel-heading\">Edite dados de usuário</div>
         <div class=\"panel-body\" style=\"padding: 5%;\">
-           <form action='./usuario/atualizaUsuario.php' method='POST'>
+           <form action='../usuario/atualizaUsuario.php' method='POST'>
            <input type='text' name='adm' value='".$_SESSION['id']."' style='display:none;'>";
        
         while ($resultado = mysqli_fetch_assoc($sql)){
